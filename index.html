@@ -2,106 +2,301 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>Сайт поиска жилья в городе Седона</title>
+    <meta name="description" content="Седона — небольшой городок в Аризоне,  заслуживающий большего! ">
+    <link href="./css/normalize.min.css" rel="stylesheet">
+    <link href="./css/grid.min.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page">
 
-    <header>
-      <nav>
-        <p><a href="index.html"><img src="https://via.placeholder.com/150" width="138" height="70" alt="Логотип сайта Седона"></a></p>
-        <ul>
-          <li><a href="blanc.html">Информация</a></li>
-          <li><a href="blanc.html">Фото и видео</a></li>
-          <li><a href="blanc.html">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
-        </ul>
-      </nav>
+    <!-- Header -->
+    <header class="header">
+      <div class="page__layout">
+        <nav class="nav">
+          <ul class="nav__items">
+            <li class="nav__item">
+              <a href="./about.html" class="link link_text">Информация</a>
+            </li>
+            <li class="nav__item">
+              <a href="./media.html" class="link link_text">Фото и видео</a>
+            </li>
+            <li class="nav__item">
+              <a class="logo nav__logo">
+                <img src="./img/logo.svg" width="138" height="70" alt="Логотип сервиса">
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="./map.html" class="link link_text">Карта штата</a>
+            </li>
+            <li class="nav__item">
+              <a href="./hotels.html" class="link link_text">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-<main>
+    <!-- Content -->
+    <main class="content">
 
-  <h1>Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</h1>
-  <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-  <section>
-    <h2>Преимущества</h2>
-    <ol>
-      <li>
-        <h3>Настоящий<br>городок</h3>
-        <p>- №1 -</p>
-        <p>Седона – не аттракцион для туристов,<br>там течёт своя жизнь</p>
-        <a><img src="image1.png" width="800" height="256" alt="Место для изображения"></a>
-        <ul>
-          <li>
-            <h3>Жильё</h3>
-            <p>Рекомендуем пожить в настоящем<br>мотеле, всё как в кино!</p>
-          </li>
-          <li>
-            <h3>Еда</h3>
-            <p>Всегда заказывайте фирменный бургер,<br>вы не разочаруетесь!</p>
-          </li>
-          <li>
-            <h3>Сувениры</h3>
-            <p>Не только китайского,<br>но и местного производства!</p>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <h3>Там есть<br>Мост дьявола</h3>
-        <p>- №2 -</p>
-        <p>Да, по нему можно пройти! Если, конечно,<br>вы осмелитесь</p>
-        <a><img src="image2.png" width="800" height="256" alt="Место для изображения"></a>
-      </li>
-      <li>
-        <h3>Небольшая площадь</h3>
-        <p>— №3 —</p>
-        <p>Все достопримечательности<br>находятся очень близко</p>
-      </li>
-      <li>
-        <h3>Красивая дорога</h3>
-        <p>— №4 —</p>
-        <p>Ехать в седону из лас-вегаса совсем<br>не скучно!</p>
-      </li>
-      <li>
-        <h3>Мало туристов</h3>
-        <p>— №5 —</p>
-        <p>Большинство едет в гранд каньон<br>и толпится там</p>
-      </li>
-    </ol>
-  </section>
+      <section class="intro">
+        <div class="intro__backdrop">
+          <img src="./img/intro.jpg" width="100%" height="100%" alt="Фотография природы в городе Седона" class="intro__image">
+          <svg viewBox="0 0 1200 57" class="intro__decor">
+            <path d="M0 57V0l250 24V0l350 57L950 0v24l250-24v57H0z" />
+          </svg>
+        </div>
+        <div class="intro__inner page__layout">
+          <img src="./img/welcome.png" srcset="./img/welcome@2x.png 2x" width="458" height="352" alt="Welcome to the georgeous Sedona" class="intro__welcome">
+        </div>
+      </section>
 
-  <section>
-    <h2>Заинтересовались?</h2>
-    <p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
-    <button type="button">Поиск гостиницы в Седоне</button>
-    <!-- Здесь будет форма -->
-  </section>
+      <section class="section">
+        <div class="page__layout">
+          <h1 class="title title_size_m title_up title_center section__about-title">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
+          <p class="text text_size_s text_up text_center">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        </div>
+      </section>
 
-  <section>
-  <h2>Карта</h2>
-  <!-- Здесь будет карта -->
-  <button type="button">Закрыть</button>
-  </section>
+      <section class="section section_no_padding section_bright">
+        <div class="grid page__layout">
+          <div class="grid__row grid__row_md_align_middle">
+            <div class="grid__col grid__col_md_4">
+              <article class="fact">
+                <h2 class="title title_size_m title_up fact__title">Настоящий<br> городок</h2>
+                <p class="text text_size_s fact__number">— №1 —</p>
+                <p class="text text_size_s text_up">Седона – не аттракцион для туристов, там<br> течёт своя жизнь</p>
+              </article>
+            </div>
+            <div class="grid__col grid__col_md_8 grid__col_no_gutter">
+              <img src="./img/image_1.jpg" srcset="./img/image_1@2x.jpg 2x" width="800" height="256" alt="Фотография города Седона">
+            </div>
+          </div>
+        </div>
+      </section>
 
-</main>
+      <section class="section">
+        <div class="grid page__layout">
+          <div class="grid__row">
+            <div class="grid__col grid__col_md_4">
+              <article class="fact">
+                <div class="fact__icon">
+                  <svg width="75" height="72" viewBox="0 0 75 72" class="icon">
+                    <path d="M45.656 65.033h-16V41.21h16v23.823zm-2.938-20.899H32.593V62.11h10.125V44.134z" />
+                    <path d="M72.771 39.253l2.076-2.068-9.908-9.865V0H51.127v13.567L37.5 0 .151993 37.185l2.076997 2.068 7.83201-7.795v37.618H6.12399V72H69.999v-2.924H64.94V31.458l7.831 7.795zM62.002 69.076H12.999V28.534L37.5 4.149l24.502 24.385v40.542zm-7.938-52.584l7.938 7.902V2.924h-7.938v13.568z" fill-rule="evenodd" />
+                    <path d="M37.656 34.7929c-4.28 0-7.75-3.452-7.75-7.713 0-4.259 3.469-7.713 7.75-7.713 4.279 0 7.75 3.454 7.75 7.713 0 4.261-3.471 7.713-7.75 7.713zm4.969-7.713c0-2.731-2.225-4.945-4.969-4.945-2.745 0-4.97 2.214-4.97 4.945 0 2.732 2.224 4.948 4.97 4.948 2.744 0 4.969-2.216 4.969-4.948zm-25.564 14.13h3v3.919h-3v-3.919zm8.938 0h-3v3.919h3v-3.919zm-8.938 5.972h3v3.919h-3v-3.919zm8.938 0h-3v3.919h3v-3.919zm22.999-5.972h3v3.919h-3v-3.919zm8.938 0h-3v3.919h3v-3.919zm-8.938 5.972h3v3.919h-3v-3.919zm8.938 0h-3v3.919h3v-3.919z" />
+                  </svg>
+                </div>
+                <h3 class="title title_size_m title_up fact__title">Жильё</h3>
+                <p class="text text_size_s text_up">Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
+              </article>
+            </div>
+            <div class="grid__col grid__col_md_4">
+              <article class="fact">
+                <div class="fact__icon">
+                  <svg width="75" height="70" viewBox="0 0 75 70" class="icon">
+                    <path d="M8.97802 31.544H69.855c.041-.619.069-1.241.069-1.87 0-.3928-.0159-.7806-.0318-1.1694v-.0001l-.0002-.0035C69.227 12.657 55.186 0 37.952 0 20.719 0 6.67702 12.657 6.01302 28.501c-.017.39-.032.78-.032 1.173 0 .629.028 1.251.07 1.87h2.927zM21.957 42.465l-5.323-4.059-5.326 4.059-6.18798-4.714 1.721-2.457 4.46698 3.401 5.327-4.057 5.323 4.057 5.325-4.057 5.328 4.057 5.328-4.057 5.328 4.057 5.329-4.057 5.327 4.057 5.33-4.056 5.336 4.057 4.474-3.403 1.72 2.459-6.194 4.712-5.336-4.059-5.33 4.06-5.327-4.059-5.329 4.059-5.328-4.059-5.328 4.059-5.328-4.059-5.326 4.059zM5.05102 46.71H70.854c2.274 0 4.134 1.94 4.134 4.313v3.504c0 2.372-1.861 4.313-4.135 4.313h-.93v1.053c0 5.536-4.342 10.065-9.648 10.065H15.629c-5.307 0-9.64798-4.529-9.64798-10.065V58.84h-.93c-2.274 0-4.135004-1.941-4.135004-4.313v-3.504c0-2.373 1.861004-4.313 4.135004-4.313zM60.276 66.915c3.711 0 6.73-3.15 6.73-7.021h-.001v-1.053H8.89802v1.053c0 3.871 3.01998 7.021 6.73098 7.021h44.647zm11.795-12.388c0 .688-.558 1.271-1.218 1.271H5.05102c-.66 0-1.217-.582-1.217-1.271v-3.504c0-.688.558-1.271 1.217-1.271H70.853c.66 0 1.218.582 1.218 1.271v3.504zm-5.098-26.026c-.671-14.142-13.43-25.458-29.021-25.458-15.591 0-28.34798 11.316-29.02098 25.458H66.973z" fill-rule="evenodd" />
+                    <path d="M37.952 17.29c1.0742 0 1.945-.9089 1.945-2.03 0-1.1212-.8708-2.03-1.945-2.03s-1.945.9088-1.945 2.03c0 1.1211.8708 2.03 1.945 2.03zM30.172 12.26c1.0748 0 1.946-.9089 1.946-2.03 0-1.12119-.8712-2.03005-1.946-2.03005-1.0747 0-1.946.90886-1.946 2.03005 0 1.1211.8713 2.03 1.946 2.03zM45.732 12.26c1.0748 0 1.946-.9089 1.946-2.03 0-1.12119-.8712-2.03005-1.946-2.03005-1.0747 0-1.946.90886-1.946 2.03005 0 1.1211.8713 2.03 1.946 2.03z" />
+                  </svg>
+                </div>
+                <h3 class="title title_size_m title_up fact__title">Еда</h3>
+                <p class="text text_size_s text_up">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
+              </article>
+            </div>
+            <div class="grid__col grid__col_md_4">
+              <article class="fact">
+                <div class="fact__icon">
+                  <svg width="64" height="77" viewBox="0 0 64 77" class="icon">
+                    <path d="M61.097 23.501H36.312C50.125 16.602 51.229 12.25 50.72 9.816c-1.162-3.963-5.692-7.023-10.002-5.407-5.569 2.089-7.137 10.388-8.644 16.387-1.924-6.07-3.784-13.814-8.136-17.737-1.261-1.138-3.095-2.264001-5.763-2.028-4.026.356-9.802 5.382-7.458 10.981 2.251 5.378 9.687 8.777 14.578 11.489H2.879C1.29355 23.5026.00715075 24.7846 0 26.37v11.322c.00715075 1.5854 1.29355 2.8674 2.879 2.869h.274V77h57.841V40.561h.103c1.5858-.0011 2.8728-1.2832 2.88-2.869V26.37c-.0072-1.5858-1.2942-2.8679-2.88-2.869zM42.413 6.944c2.103-.31 4.982 1.299 5.255 3.209.393 2.756-3.4 5.255-5.086 6.421-2.523 1.744-4.928 2.643-7.287 4.055.884-3.69 2.549-13.011 7.118-13.685zm-22.882 9.968c-2.225-1.485-6.544-4.431-6.44-7.771.112-3.595 5.743-6.57 8.814-3.886 3.856 3.371 5.713 11.105 7.119 16.557-3.249-1.539-6.328-2.788-9.493-4.9zm5.972 57.114H6.136V40.561h19.368v33.465h-.001zm0-36.502H3.046V26.538h22.457v10.986zm10.157 0v36.503h-7.174V26.538h7.174v10.986zm22.351 36.502H38.644V40.561h19.367v33.465zm2.92-36.502H38.644V26.538h22.287v10.986z" />
+                  </svg>
+                </div>
+                <h3 class="title title_size_m title_up fact__title">Сувениры</h3>
+                <p class="text text_size_s text_up">Не только китайского, но и местного<br> производства!</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<footer>
-  <section>
-    <h2>Контакты</h2>
-    <p>
-      #VISITSEDONA<br>
-      ТЕЛ: <a href="tel:+74956660166">+7 (495) 666-02-66</a>
-    </p>
-    <p>
-      <a target="_blank" href="https://twitter.com/htmlacademy_ru">Twitter</a>
-      <a target="_blank" href="https://www.facebook.com/htmlacademy">Facebook</a>
-      <a target="_blank" href="https://www.youtube.com/user/htmlacademyru">YouTube</a>
-    </p>
-    <p>
-      Разработано:
-      <a target="_blank" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-    </p>
-  </section>
-</footer>
+      <section class="section section_no_padding section_bright">
+        <div class="grid page__layout">
+          <div class="grid__row grid__row_md_align_middle">
+            <div class="grid__col grid__col_md_8 grid__col_no_gutter">
+              <img src="./img/image_2.jpg" srcset="./img/image_2@2x.jpg 2x" width="800" height="256" alt="Фотография моста дьявола">
+            </div>
+            <div class="grid__col grid__col_md_4">
+              <article class="fact">
+                <h3 class="title title_size_m title_up fact__title">Там есть <br> Мост дьявола</h3>
+                <p class="text text_size_s fact__number">— №2 —</p>
+                <p class="text text_size_s text_up">Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section_dim">
+        <div class="grid page__layout">
+          <div class="grid__row">
+            <div class="grid__col grid__col_md_4">
+              <article class="fact">
+                <h3 class="title title_size_m title_up fact__title">Небольшая<br> площадь</h3>
+                <p class="text text_size_s fact__number">— №3 —</p>
+                <p class="text text_size_s text_up">Все достопримечательности<br> находятся очень близко</p>
+              </article>
+            </div>
+            <div class="grid__col grid__col_md_4">
+              <article class="fact">
+                <h3 class="title title_size_m title_up fact__title">Красивая<br> дорога</h3>
+                <p class="text text_size_s fact__number">— №4 —</p>
+                <p class="text text_size_s text_up">Ехать в седону из лас-вегаса совсем<br> не скучно!</p>
+              </article>
+            </div>
+            <div class="grid__col grid__col_md_4">
+              <article class="fact">
+                <h3 class="title title_size_m title_up fact__title">Мало<br> туристов</h3>
+                <p class="text text_size_s fact__number">— №5 —</p>
+                <p class="text text_size_s text_up">Большинство едет в гранд каньон<br> и толпится там</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section_no_padding_bottom">
+        <div class="page__layout">
+          <h4 class="title title_size_l title_up title_center section__title">Заинтересовались?</h4>
+          <p class="text text_size_s text_up text_center">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+        </div>
+        <div class="section__search">
+          <div class="section__form">
+            <form action="https://echo.htmlacademy.ru" method="POST" class="form">
+              <div class="form__header">
+                <h6 class="title title_size_m title_up title_center">Поиск гостиницы в седоне</h6>
+              </div>
+              <div class="grid form__content">
+                <div class="grid__row grid__row_md_align_middle">
+                  <div class="grid__col grid__col_md_3 grid__col_no_gutter">
+                    <label for="arrival-date-field" class="title title_size_s title_up">Дата заезда:</label>
+                  </div>
+                  <div class="grid__col grid__col_md_9 grid__col_no_gutter">
+                    <input type="date" name="arrival_date" id="arrival-date-field" class="field" placeholder="24.09.2020" required />
+                  </div>
+                </div>
+                <div class="grid__row grid__row_md_align_middle grid__gap">
+                  <div class="grid__col grid__col_md_3 grid__col_no_gutter">
+                    <label for="departure-date-field" class="title title_size_s title_up">Дата выезда:</label>
+                  </div>
+                  <div class="grid__col grid__col_md_9 grid__col_no_gutter">
+                    <input type="date" name="departure_date" id="departure-date-field" class="field" placeholder="15.10.2020" required />
+                  </div>
+                </div>
+                <div class="grid__row grid__row_md_align_middle grid__gap">
+                  <div class="grid__col grid__col_md_3 grid__col_no_gutter">
+                    <label for="adult-quantity" class="title title_size_s title_up">Взрослые:</label>
+                  </div>
+                  <div class="grid__col grid__col_md_3 grid__col_no_gutter">
+                    <div class="quantity">
+                      <button class="quantity__button" type="button" data-quantity-button="decrease">
+                        <svg width="12" height="3" viewBox="0 0 12 3" class="icon">
+                          <path d="M0 0h12v3H0z" />
+                        </svg>
+                        <span class="visually-hidden">Уменьшить количество взрослых</span>
+                      </button>
+                      <input type="number" name="adult_quantity" min="1" max="10" value="2" id="adult-quantity" class="field quantity__field" required />
+                      <button class="quantity__button" type="button" data-quantity-button="increase">
+                        <svg width="11" height="11" viewBox="0 0 11 11" class="icon">
+                          <path d="M4.23086 6.76932V11h2.53846V6.76932H11V4.23086H6.76932V0H4.23085v4.23086H0v2.53846h4.23086z" />
+                        </svg>
+                        <span class="visually-hidden">Увеличить количество взрослых</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="grid__col grid__col_md_3 grid__col_no_gutter grid__col_align_right">
+                    <label for="child-quantity" class="title title_size_s title_up">Дети:&nbsp;&emsp;</label>
+                  </div>
+                  <div class="grid__col grid__col_md_3 grid__col_no_gutter">
+                    <div class="quantity">
+                      <button class="quantity__button" type="button" data-quantity-button="decrease">
+                        <svg width="12" height="3" viewBox="0 0 12 3" class="icon">
+                          <path d="M0 0h12v3H0z" />
+                        </svg>
+                        <span class="visually-hidden">Уменьшить количество детей</span>
+                      </button>
+                      <input type="number" name="child_quantity" min="0" max="10" value="0" id="child-quantity" class="field quantity__field" required />
+                      <button class="quantity__button" type="button" data-quantity-button="increase">
+                        <svg width="11" height="11" viewBox="0 0 11 11" class="icon">
+                          <path d="M4.23086 6.76932V11h2.53846V6.76932H11V4.23086H6.76932V0H4.23085v4.23086H0v2.53846h4.23086z" />
+                        </svg>
+                        <span class="visually-hidden">Увеличить количество детей</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid__row form__submit">
+                  <div class="grid__col grid__col_no_gutter">
+                    <button class="button button_size_m form__button" type="submit">Найти</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="ymap section__map" data-lat="34.848600" data-lng="-111.788390" data-zoom="10"></div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer page__above-footer">
+      <div class="grid page__layout">
+        <div class="grid__row grid__row_md_align_middle">
+          <div class="grid__col">
+            <div class="title title_size_m footer__contacts">
+              #VISITSEDONA<br>
+              ТЕЛ: <a href="tel:+74956660166" class="link link_text">+7 (495) 666-02-66</a>
+            </div>
+          </div>
+          <div class="grid__col">
+            <div class="social">
+              <a class="social__link" href="https://twitter.com/htmlacademy_ru" target="_blank">
+                <svg width="17" height="17" viewBox="0 0 17 17" class="icon">
+                  <path d="M10.95 1.14409c1.685-.496001 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708-.0131.68636-.3263 1.33252-.857 1.768.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75001-3.175 11.21701-10.07702 11.08201h-.446c-.41 0-4.164003-.46-4.89800344-1.887 2.27100344.196 3.89300344-.422 4.69300344-1.177-.96-.3-2.679-.477-2.979-2.95001.349.10601.564.22801 1.19.11901-1.2-.85601-2.531003-1.57301-2.457003-3.77301.285.328 1.067003.536 1.340003.472-.703-.241-1.970003-3.36-.894003-4.952 1.818003 1.854 3.735003 3.606 7.152003 3.773.208-2.293 1.137-3.83 2.90402-4.479z" />
+                </svg>
+                <span class="visually-hidden">Наш профиль в Twitter</span>
+              </a>
+              <a class="social__link" href="https://www.facebook.com/htmlacademy" target="_blank">
+                <svg width="12" height="22" viewBox="0 0 12 22" class="icon">
+                  <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4v4H0v4h4v10h4V12h4V8H8V4h4z" />
+                </svg>
+                <span class="visually-hidden">Наш профиль в Facebook</span>
+              </a>
+              <a class="social__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+                <svg width="20" height="16" viewBox="0 0 20 16" class="icon">
+                  <path d="M3 0h14c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3zm3.027 4.002v7.996L15.014 8 6.027 4.002z" />
+                </svg>
+                <span class="visually-hidden">Наша страница в YouTube</span>
+              </a>
+            </div>
+          </div>
+          <div class="grid__col">
+            <div class="copyright">
+              <span class="copyright__label">Website by</span>
+              <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+                <img src="img/logo_htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
+                <span class="visually-hidden">Перейти на сайт HTML Academy</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="./js/ymap.js"></script>
+    <script src="./js/quantity.js"></script>
 
   </body>
 </html>
