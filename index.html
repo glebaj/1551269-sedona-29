@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Сайт поиска жилья в городе Седона</title>
-    <meta name="description" content="Седона — небольшой городок в Аризоне,  заслуживающий большего! ">
+    <meta name="description" content="Седона — небольшой городок в Аризоне, заслуживающий большего!">
     <link href="./css/normalize.min.css" rel="stylesheet">
-    <link href="./css/grid.min.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
   </head>
   <body class="page">
@@ -42,7 +41,7 @@
 
       <section class="intro">
         <div class="intro__backdrop">
-          <img src="./img/intro.jpg" width="100%" height="100%" alt="Фотография природы в городе Седона" class="intro__image">
+          <img src="./img/intro.jpg" alt="Фотография природы в городе Седона" class="intro__image">
           <svg viewBox="0 0 1200 57" class="intro__decor">
             <path d="M0 57V0l250 24V0l350 57L950 0v24l250-24v57H0z" />
           </svg>
@@ -127,7 +126,7 @@
             </div>
             <div class="grid__col grid__col_md_4">
               <article class="fact">
-                <h3 class="title title_size_m title_up fact__title">Там есть <br> Мост дьявола</h3>
+                <h3 class="title title_size_m title_up fact__title">Там есть<br> Мост дьявола</h3>
                 <p class="text text_size_s fact__number">— №2 —</p>
                 <p class="text text_size_s text_up">Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
               </article>
@@ -172,16 +171,16 @@
         <div class="section__search">
           <div class="section__form">
             <form action="https://echo.htmlacademy.ru" method="POST" class="form">
-              <div class="form__header">
-                <h6 class="title title_size_m title_up title_center">Поиск гостиницы в седоне</h6>
-              </div>
-              <div class="grid form__content">
+              <button type="button" class="form__toggle" data-toggle="form">
+                <span class="title title_size_m title_up title_center">Поиск гостиницы в седоне</span>
+              </button>
+              <div class="grid form__content" data-hidden-id="form" hidden>
                 <div class="grid__row grid__row_md_align_middle">
                   <div class="grid__col grid__col_md_3 grid__col_no_gutter">
                     <label for="arrival-date-field" class="title title_size_s title_up">Дата заезда:</label>
                   </div>
                   <div class="grid__col grid__col_md_9 grid__col_no_gutter">
-                    <input type="date" name="arrival_date" id="arrival-date-field" class="field" placeholder="24.09.2020" required />
+                    <input type="date" name="arrival_date" id="arrival-date-field" class="field" required />
                   </div>
                 </div>
                 <div class="grid__row grid__row_md_align_middle grid__gap">
@@ -189,7 +188,7 @@
                     <label for="departure-date-field" class="title title_size_s title_up">Дата выезда:</label>
                   </div>
                   <div class="grid__col grid__col_md_9 grid__col_no_gutter">
-                    <input type="date" name="departure_date" id="departure-date-field" class="field" placeholder="15.10.2020" required />
+                    <input type="date" name="departure_date" id="departure-date-field" class="field" required />
                   </div>
                 </div>
                 <div class="grid__row grid__row_md_align_middle grid__gap">
@@ -293,10 +292,11 @@
       </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Scripts --> 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./js/ymap.js"></script>
     <script src="./js/quantity.js"></script>
+    <script src="./js/toggle.js"></script>
 
   </body>
 </html>
