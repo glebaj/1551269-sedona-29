@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Гостиницы</title>
-    <meta name="description" content="Подбор жилья в городе Седона">
-    <link href="./css/normalize.min.css" rel="stylesheet">
-    <link href="./css/main.css" rel="stylesheet">
-  </head>
-  <body class="page">
 
+<head>
+  <meta charset="utf-8">
+  <title>Гостиницы</title>
+  <meta name="description" content="Подбор жилья в городе Седона">
+  <link href="./css/normalize.min.css" rel="stylesheet">
+  <link href="./css/main.css" rel="stylesheet">
+</head>
+
+<body class="page">
+
+  <div class="page-container">
     <!-- Header -->
     <header class="header">
       <div class="page__layout">
@@ -30,7 +33,7 @@
               <a href="./map.html" class="link link_text">Карта штата</a>
             </li>
             <li class="nav__item">
-              <a class="link">Гостиницы</a>
+              <a class="link link-current">Гостиницы</a>
             </li>
           </ul>
         </nav>
@@ -41,7 +44,8 @@
     <main class="content">
 
       <!-- Filter -->
-      <form action="https://echo.htmlacademy.ru" method="POST" class="form section section_small_padding section_filter">
+      <form action="https://echo.htmlacademy.ru" method="POST"
+        class="form section section_small_padding section_filter">
         <div class="grid page__layout page__layout_tight">
           <div class="grid__row">
             <div class="grid__col grid__col_md_3 grid__col_no_gutter">
@@ -49,30 +53,66 @@
                 <legend class="title title_up form__legend">Инфраструктура:</legend>
                 <div class="checkbox form__checkbox">
                   <label class="checkbox__label">
-                    <input type="checkbox" name="infrastructure[pool]" checked value="yes" class="checkbox__input visually-hidden">
-                    <svg width="27" height="23" viewBox="0 0 27 23" class="icon">
-                      <path d="M7.28505 7.48601l-2.829 2.82899 7.78305 7.783 13.932-13.93199-2.828-2.829L12.2391 12.439 7.28505 7.48601z" class="checkbox__tick" />
-                      <path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415C21.041.146542 20.5257.00329969 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
+                    <input type="checkbox" name="infrastructure[pool]" checked value="yes"
+                      class="checkbox__input visually-hidden">
+                    <svg class="icon-checkbox-unchecked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
+                        fill="white" />
+                    </svg>
+                    <svg class="icon-checkbox-checked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.28499 7.48601L4.45599 10.315L12.239 18.098L26.171 4.16601L23.343 1.33701L12.239 12.439L7.28499 7.48601Z"
+                        fill="white" />
+                      <path
+                        d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z"
+                        fill="white" />
                     </svg>
                     <span class="text text_up checkbox__text">Бассейн</span>
                   </label>
                 </div>
                 <div class="checkbox form__checkbox">
                   <label class="checkbox__label">
-                    <input type="checkbox" name="infrastructure[parking]" value="yes" class="checkbox__input visually-hidden">
-                    <svg width="27" height="23" viewBox="0 0 27 23" class="icon">
-                      <path d="M7.28505 7.48601l-2.829 2.82899 7.78305 7.783 13.932-13.93199-2.828-2.829L12.2391 12.439 7.28505 7.48601z" class="checkbox__tick" />
-                      <path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415C21.041.146542 20.5257.00329969 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
+                    <input type="checkbox" name="infrastructure[parking]" value="yes"
+                      class="checkbox__input visually-hidden">
+                      <svg class="icon-checkbox-unchecked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
+                        fill="white" />
+                    </svg>
+                    <svg class="icon-checkbox-checked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.28499 7.48601L4.45599 10.315L12.239 18.098L26.171 4.16601L23.343 1.33701L12.239 12.439L7.28499 7.48601Z"
+                        fill="white" />
+                      <path
+                        d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z"
+                        fill="white" />
                     </svg>
                     <span class="text text_up checkbox__text">Парковка</span>
                   </label>
                 </div>
                 <div class="checkbox form__checkbox">
                   <label class="checkbox__label">
-                    <input type="checkbox" name="infrastructure[wifi]" value="yes" class="checkbox__input visually-hidden">
-                    <svg width="27" height="23" viewBox="0 0 27 23" class="icon">
-                      <path d="M7.28505 7.48601l-2.829 2.82899 7.78305 7.783 13.932-13.93199-2.828-2.829L12.2391 12.439 7.28505 7.48601z" class="checkbox__tick" />
-                      <path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415C21.041.146542 20.5257.00329969 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
+                    <input type="checkbox" name="infrastructure[wifi]" value="yes"
+                      class="checkbox__input visually-hidden">
+                      <svg class="icon-checkbox-unchecked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
+                        fill="white" />
+                    </svg>
+                    <svg class="icon-checkbox-checked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.28499 7.48601L4.45599 10.315L12.239 18.098L26.171 4.16601L23.343 1.33701L12.239 12.439L7.28499 7.48601Z"
+                        fill="white" />
+                      <path
+                        d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z"
+                        fill="white" />
                     </svg>
                     <span class="text text_up checkbox__text">Wi-Fi</span>
                   </label>
@@ -84,10 +124,22 @@
                 <legend class="title title_up form__legend">Тип жилья:</legend>
                 <div class="checkbox form__checkbox">
                   <label class="checkbox__label">
-                    <input type="checkbox" name="type[hotel]" checked value="yes" class="checkbox__input visually-hidden">
-                    <svg width="27" height="23" viewBox="0 0 27 23" class="icon">
-                      <path d="M7.28505 7.48601l-2.829 2.82899 7.78305 7.783 13.932-13.93199-2.828-2.829L12.2391 12.439 7.28505 7.48601z" class="checkbox__tick" />
-                      <path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415C21.041.146542 20.5257.00329969 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
+                    <input type="checkbox" name="type[hotel]" checked value="yes"
+                      class="checkbox__input visually-hidden">
+                      <svg class="icon-checkbox-unchecked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
+                        fill="white" />
+                    </svg>
+                    <svg class="icon-checkbox-checked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.28499 7.48601L4.45599 10.315L12.239 18.098L26.171 4.16601L23.343 1.33701L12.239 12.439L7.28499 7.48601Z"
+                        fill="white" />
+                      <path
+                        d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z"
+                        fill="white" />
                     </svg>
                     <span class="text text_up checkbox__text">Гостиница</span>
                   </label>
@@ -95,9 +147,20 @@
                 <div class="checkbox form__checkbox">
                   <label class="checkbox__label">
                     <input type="checkbox" name="type[motel]" value="yes" class="checkbox__input visually-hidden">
-                    <svg width="27" height="23" viewBox="0 0 27 23" class="icon">
-                      <path d="M7.28505 7.48601l-2.829 2.82899 7.78305 7.783 13.932-13.93199-2.828-2.829L12.2391 12.439 7.28505 7.48601z" class="checkbox__tick" />
-                      <path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415C21.041.146542 20.5257.00329969 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
+                    <svg class="icon-checkbox-unchecked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
+                        fill="white" />
+                    </svg>
+                    <svg class="icon-checkbox-checked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.28499 7.48601L4.45599 10.315L12.239 18.098L26.171 4.16601L23.343 1.33701L12.239 12.439L7.28499 7.48601Z"
+                        fill="white" />
+                      <path
+                        d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z"
+                        fill="white" />
                     </svg>
                     <span class="text text_up checkbox__text">Мотель</span>
                   </label>
@@ -105,9 +168,20 @@
                 <div class="checkbox form__checkbox">
                   <label class="checkbox__label">
                     <input type="checkbox" name="type[apartments]" value="yes" class="checkbox__input visually-hidden">
-                    <svg width="27" height="23" viewBox="0 0 27 23" class="icon">
-                      <path d="M7.28505 7.48601l-2.829 2.82899 7.78305 7.783 13.932-13.93199-2.828-2.829L12.2391 12.439 7.28505 7.48601z" class="checkbox__tick" />
-                      <path d="M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415C21.041.146542 20.5257.00329969 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z" />
+                    <svg class="icon-checkbox-unchecked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3 0H20C21.65 0 23 1.35 23 3V20C23 21.65 21.65 23 20 23H3C1.35 23 0 21.65 0 20V3C0 1.35 1.35 0 3 0ZM21 3C21 2.458 20.542 2 20 2H3C2.458 2 2 2.458 2 3V20C2 20.542 2.458 21 3 21H20C20.542 21 21 20.542 21 20V3Z"
+                        fill="white" />
+                    </svg>
+                    <svg class="icon-checkbox-checked" width="27" height="23" viewBox="0 0 27 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.28499 7.48601L4.45599 10.315L12.239 18.098L26.171 4.16601L23.343 1.33701L12.239 12.439L7.28499 7.48601Z"
+                        fill="white" />
+                      <path
+                        d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z"
+                        fill="white" />
                     </svg>
                     <span class="text text_up checkbox__text">Апартаменты</span>
                   </label>
@@ -121,11 +195,13 @@
                   <div class="range__fields">
                     <div class="range__field">
                       <label for="price-from" class="range__label">От</label>
-                      <input type="number" name="price[from]" min="0" max="10000" step="100" value="0" id="price-from" class="field range__input" />
+                      <input type="number" name="price[from]" min="0" max="10000" step="100" value="0" id="price-from"
+                        class="field range__input" />
                     </div>
                     <div class="range__field">
                       <label for="price-to" class="range__label">До</label>
-                      <input type="number" name="price[to]" min="0" max="10000" step="100" value="0" id="price-to" class="field range__input" />
+                      <input type="number" name="price[to]" min="0" max="10000" step="100" value="0" id="price-to"
+                        class="field range__input" />
                     </div>
                   </div>
                   <div class="range__slider">
@@ -134,7 +210,7 @@
                 </div>
               </fieldset>
               <div class="form__action">
-                <button class="button button_border button_size_s" type="submit">Показать</button>
+                <button class="button button_border button_size_xs" type="submit">Показать</button>
               </div>
             </div>
           </div>
@@ -175,7 +251,8 @@
         <article class="card content__card">
           <div class="card__inner page__layout page__layout_tight">
             <figure class="card__image">
-              <img src="./img/card_1.jpg" srcset="./img/card_1@2x.jpg 2x" width="135" height="90" alt="Фотография Amara Resort & Spa">
+              <img src="./img/card_1.jpg" srcset="./img/card_1@2x.jpg 2x" width="135" height="90"
+                alt="Фотография Amara Resort & Spa">
             </figure>
             <div class="card__main">
               <h3 class="title title_size_m title_up card__title">Amara Resort & Spa</h3>
@@ -197,7 +274,8 @@
         <article class="card content__card">
           <div class="card__inner page__layout page__layout_tight">
             <figure class="card__image">
-              <img src="./img/card_2.jpg" srcset="./img/card_2@2x.jpg 2x" width="135" height="90" alt="Фотография Desert Quail Inn">
+              <img src="./img/card_2.jpg" srcset="./img/card_2@2x.jpg 2x" width="135" height="90"
+                alt="Фотография Desert Quail Inn">
             </figure>
             <div class="card__main">
               <h3 class="title title_size_m title_up card__title">Desert Quail Inn</h3>
@@ -219,7 +297,8 @@
         <article class="card content__card">
           <div class="card__inner page__layout page__layout_tight">
             <figure class="card__image">
-              <img src="./img/card_3.jpg" srcset="./img/card_3@2x.jpg 2x" width="135" height="90" alt="Фотография Villas at Poco Diablo">
+              <img src="./img/card_3.jpg" srcset="./img/card_3@2x.jpg 2x" width="135" height="90"
+                alt="Фотография Villas at Poco Diablo">
             </figure>
             <div class="card__main">
               <h3 class="title title_size_m title_up card__title">Villas at Poco Diablo</h3>
@@ -256,7 +335,8 @@
             <div class="social">
               <a class="social__link" href="https://twitter.com/htmlacademy_ru" target="_blank">
                 <svg width="17" height="17" viewBox="0 0 17 17" class="icon">
-                  <path d="M10.95 1.14409c1.685-.496001 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708-.0131.68636-.3263 1.33252-.857 1.768.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75001-3.175 11.21701-10.07702 11.08201h-.446c-.41 0-4.164003-.46-4.89800344-1.887 2.27100344.196 3.89300344-.422 4.69300344-1.177-.96-.3-2.679-.477-2.979-2.95001.349.10601.564.22801 1.19.11901-1.2-.85601-2.531003-1.57301-2.457003-3.77301.285.328 1.067003.536 1.340003.472-.703-.241-1.970003-3.36-.894003-4.952 1.818003 1.854 3.735003 3.606 7.152003 3.773.208-2.293 1.137-3.83 2.90402-4.479z" />
+                  <path
+                    d="M10.95 1.14409c1.685-.496001 2.984.27 3.577 1.179.673-.231 1.331-.481 2.011-.708-.0131.68636-.3263 1.33252-.857 1.768.685.17 1.304-.491 1.304-.491-.169 1-1.006 1.788-1.563 2.024-.231 6.75001-3.175 11.21701-10.07702 11.08201h-.446c-.41 0-4.164003-.46-4.89800344-1.887 2.27100344.196 3.89300344-.422 4.69300344-1.177-.96-.3-2.679-.477-2.979-2.95001.349.10601.564.22801 1.19.11901-1.2-.85601-2.531003-1.57301-2.457003-3.77301.285.328 1.067003.536 1.340003.472-.703-.241-1.970003-3.36-.894003-4.952 1.818003 1.854 3.735003 3.606 7.152003 3.773.208-2.293 1.137-3.83 2.90402-4.479z" />
                 </svg>
                 <span class="visually-hidden">Наш профиль в Twitter</span>
               </a>
@@ -268,7 +348,8 @@
               </a>
               <a class="social__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
                 <svg width="20" height="16" viewBox="0 0 20 16" class="icon">
-                  <path d="M3 0h14c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3zm3.027 4.002v7.996L15.014 8 6.027 4.002z" />
+                  <path
+                    d="M3 0h14c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3zm3.027 4.002v7.996L15.014 8 6.027 4.002z" />
                 </svg>
                 <span class="visually-hidden">Наша страница в YouTube</span>
               </a>
@@ -286,6 +367,8 @@
         </div>
       </div>
     </footer>
+  </div>
 
-  </body>
+</body>
+
 </html>
